@@ -1,0 +1,38 @@
+SITE:
+    Local: 'https://rdm.lndo.site/'
+    Remote:
+        Url: 'https://rdm2.researchspaces.ca/'
+        Path: user
+PORT: 8000
+BSREWRITE:
+    Css:
+      
+        Match: '/themes/contrib/rdm/css/style.css'
+        Replace: '/css/style.css'
+    Js:
+        Match: "/themes/contrib/RDM/js/"
+        Replace: "/js/"
+PATHS:
+    Watch:
+      #changes in these compiled files trigged reload
+      - ./css/*.css
+      - ./js/*.js
+    Scss:
+        Dir: ./scss
+        Libraries:
+            #- libraries/guff
+            #- bower_components/foundation-sites/scss
+            #- bower_components/motion-ui/src
+            #- node_modules/modularscale-sass/stylesheets
+            #- libraries/fontawesome-free/scss
+    Css:
+        Dir: css
+        #FileName: app.css
+    Js:
+        Src: ./js/src/*.js
+        Dest: js
+        FileName: 'app.js'
+    Img:
+        Src: img/src
+        Dest: img
+
